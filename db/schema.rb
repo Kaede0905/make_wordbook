@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_05_14_061329) do
-  create_table "word", force: :cascade do |t|
+ActiveRecord::Schema[7.2].define(version: 2025_05_14_062017) do
+  create_table "words", force: :cascade do |t|
     t.string "english"
     t.string "japanese"
     t.integer "user_id"

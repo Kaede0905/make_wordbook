@@ -13,7 +13,6 @@ class WordsController < ApplicationController
     else
       render :new
     end
-    Word.exists?
   end
 
   private
