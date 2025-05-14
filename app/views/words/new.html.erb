@@ -1,0 +1,19 @@
+<main>
+  <div class='wrapper'>
+    <form class='new_word_form'>
+    <%= form_with model: @word do |form| %>
+      <div>
+        <%= form.label :英語 %><br>
+        <%= form.text_field :english %>
+      </div>
+      <div>
+        <%= form.label :意味 %><br>
+        <%= form.text_field :japanese %>
+      </div>
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
+    </form>
+  </div>
+</main>
