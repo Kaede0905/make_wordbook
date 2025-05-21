@@ -1,4 +1,3 @@
-<main>
   <div class='wrapper'>
     <div class='new_word_form'>
       <%= form_with model: @word do |form| %>
@@ -20,7 +19,7 @@
         <%= form.text_field :japanese %>
       </div>
       <div>
-        <%= form.submit value='送信'%>
+        <%= form.submit value='編集する'%>
       </div>
       <% end %>
     </div>

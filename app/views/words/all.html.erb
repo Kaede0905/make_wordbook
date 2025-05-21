@@ -1,0 +1,13 @@
+<main>
+  <div class='wrapper'>
+    <% @words.each do |word| %>
+      <tr>
+        <td>ID: <%= word.id %></td>
+        <td>英語: <%= word.english %></td>
+        <td>日本語:<%= word.japanese %></td>
+        <td><%= link_to 'show', word_path(word) %></td>
+        <td><%= link_to '編集', edit_word_path(word) %></td>
+      </tr><br>
+    <% end %>
+  </div>
+</main>

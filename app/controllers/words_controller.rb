@@ -1,5 +1,14 @@
 class WordsController < ApplicationController
+
   def index
+  end
+
+  def all
+    @words = Word.all
+  end
+
+  def show
+    @word = Word.find(params[:id])
   end
 
   def new
@@ -9,14 +18,32 @@ class WordsController < ApplicationController
   def create
     @word = Word.new(word_params)
     if @word.save
-      redirect_to @word, notice: "単語が作成されました！"
+      redirect_to @word, notice: "単語を保存しました！"
     else
-      render :new
+      render 'new'
     end
   end
 
-  private
-  def word_params
-    params.require(:word).permit(:english, :japanese)
+  def edit
+    @word = Word.find(params[:id])
   end
+
+  def update
+    @word = Word.find(params[:id])
+    if @word.update(word_params)
+      redirect_to @word
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+  end
+
+  private
+
+  def word_params
+    params.require(:word).permit(:english, :japanese,)
+  end
+
 end
