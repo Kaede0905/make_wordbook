@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/words/all", to: "words#all"
   resources :words
-  
+  resources :documents
 end
