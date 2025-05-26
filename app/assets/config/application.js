@@ -32,7 +32,6 @@ let method;
 // showアクションの設定
 document.getElementById("a_show").onclick = function() {
   method = show;
-  
 };
 
 // makeアクションの設定
