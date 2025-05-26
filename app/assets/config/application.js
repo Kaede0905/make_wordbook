@@ -1,6 +1,11 @@
 console.log("start");
+
+// ログインしてるか確認
 const test = document.getElementById("show_link_0");
+
 if (test){
+
+  // headerを変更
   document.getElementById("show_link_0").remove();
   document.getElementById("a_make").remove();
   document.getElementById("a_edit").remove();
@@ -20,3 +25,21 @@ if (test){
 } else {
   console.log("ログインしています。");
 }
+
+// methodを設定
+let method;
+
+// showアクションの設定
+document.getElementById("a_show").onclick = function() {
+  method = show;
+};
+
+// makeアクションの設定
+document.getElementById("a_make").onclick = function() {
+  method = make;
+};
+
+// editアクションの設定
+document.getElementById("a_edit").onclick = function() {
+  method = edit;
+};

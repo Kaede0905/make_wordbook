@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   get "/words/play", to: "words#play"
   post "/words/check/:id", to: "words#check", as: :words_check
   resources :words
-  
+  resources :documents
 end

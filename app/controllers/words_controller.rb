@@ -23,6 +23,7 @@ class WordsController < ApplicationController
   def create
     @word = Word.new(word_params)
     @word.user_id = current_user.id
+    @word.File_number = 1
     if @word.save
       redirect_to @word, notice: "単語を保存しました！"
     else
