@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'words#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "/words/all", to: "words#all"
+  get "/words/play", to: "words#play"
+  post "/words/check/:id", to: "words#check", as: :words_check
   resources :words
   resources :documents
 end

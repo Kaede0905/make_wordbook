@@ -1,11 +1,6 @@
 console.log("start");
-
-// ログインしてるか確認
 const test = document.getElementById("show_link_0");
-
 if (test){
-
-  // headerを変更
   document.getElementById("show_link_0").remove();
   document.getElementById("a_make").remove();
   document.getElementById("a_edit").remove();

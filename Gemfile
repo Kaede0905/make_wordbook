@@ -58,3 +58,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+source 'https://rubygems.org'
+
+gem 'devise'
