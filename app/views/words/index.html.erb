@@ -1,6 +1,30 @@
+<%= stylesheet_link_tag "index", media: "all" %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <main>
-  <div class='wrapper'>
-    <h1>ようこそ</h1>
-    <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
-  </div>
+    <div class='background_book'>
+      <div class='index_padding'></div>
+      <div class='main_title'>
+        <h1><span class='black'>Make</span><br>WordBook</h1>
+      </div>
+      <div class='index_center'>
+        <h1>ようこそ</h1>
+        <ul class='unpoint'>
+          <li></li>
+        </ul>
+        <ul class='unpoint'>使い方！
+          <li id="link_to_signin">まずは<a href="/users/sign_up">Signin!</a></li>
+          <li id="link_to_login">アカウントをお持ちの方は<a href="/users/sign_in">Login!</a></li>
+          <li><a href="/words/new">MAKE</a>で問題集を作成</li>
+          <li><a href="/words/all">EDIT</a>で問題集を編集</li>
+          <li><a href="/words/play">SHOW</a>で問題集に挑戦！！</li>
+        </ul>
+        
+        <div id='logout_button'>
+          <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        </div>
+      </div>
+      <%= javascript_include_tag "index"%>
+    </div>
 </main>

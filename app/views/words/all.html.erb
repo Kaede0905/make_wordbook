@@ -1,11 +1,12 @@
 <main>
   <div class='wrapper'>
+    <% number = 0 %>
     <% @words.each do |word| %>
+    <% number += 1 %>
       <tr>
-        <td>ID: <%= word.id %></td>
+        <td>問題番号: <%= number %></td>
         <td>英語: <%= word.english %></td>
         <td>日本語:<%= word.japanese %></td>
-        <td><%= link_to '詳細', word_path(word) %></td>
         <td><%= link_to '編集', edit_word_path(word) %></td>
         <td><%= form_with url: word_path(word), method: :delete do %>
               <%= submit_tag '削除', data: { turbo_confirm: '本当に消去しますか？' } %>

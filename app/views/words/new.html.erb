@@ -1,5 +1,7 @@
 <main>
+  <div class="new_background">
   <div class='wrapper'>
+  <h3 class= new_h>新しい単語を作る</h3>
     <div class='new_word_form'>
       <%= form_with model: @word do |form| %>
         <% if @word.errors.any? %>
@@ -24,5 +26,6 @@
       </div>
       <% end %>
     </div>
+  </div>
   </div>
 </main>

@@ -1,0 +1,68 @@
+.background_book{
+  height: calc(100vh - 76px);
+  background-image: url('library.jpg');
+  background-size: cover;
+  background-position-x: 37%;
+  background-repeat: no-repeat;
+  box-shadow: -10px 0 40px #1c1c1c , 10px 0 40px #1c1c1c;
+}
+
+/* .background_cotton{
+  background-image: url(cotton2.jpg);
+  background-size: cover;
+  background-color: rgb(34, 18, 0);
+  height: 1000px;
+} */
+
+.index_padding{
+  padding-top: 73px;
+}
+
+.main_title{
+  padding-left: 50px;
+  
+}
+
+.main_title h1{
+  color:rgb(255, 255, 255);
+  font-size: 6.5rem;
+  font-family: "Ancizar Serif", serif;
+  font-weight: 500;
+}
+
+.index_center{
+  /* width: fit-content;
+  margin: 50px 70px 0 auto; */
+  width: 100%;
+  text-align: center;
+  color: rgb(236, 236, 236);
+  background-color: #38342b;
+  /* background-image:url(cotton2.jpg) ;
+  background-size: cover; */
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 8px 0 8px #1c1c1c,-8px 0 8px #1c1c1c;
+
+}
+
+.unpoint{
+  padding: 0;
+}
+
+.unpoint li{
+  list-style: none;
+}
+
+@media (max-width: 700px ){
+  .main_title{
+  width: fit-content;
+  padding: 0;
+  margin: 0 auto;
+}
+  .main_title h1{
+    font-size: 4.5rem;
+  }
+  .background_book{
+  height: calc(100vh - 72px);
+  }
+}
