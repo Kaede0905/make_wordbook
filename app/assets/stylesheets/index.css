@@ -1,6 +1,6 @@
 .background_book{
   height: calc(100vh - 76px);
-  background-image: url('library.jpg');
+  background-image: url(library.jpg);
   background-size: cover;
   background-position-x: 37%;
   background-repeat: no-repeat;
