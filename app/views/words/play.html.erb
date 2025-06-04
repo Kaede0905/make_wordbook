@@ -1,29 +1,39 @@
-<main>
-  <div class="wrapper">
+<main class="play_background">
+  <div class="wrapper play_padding_top">
     <% number = 1 %>
     <% @words.each do |word| %>
+    <div class="play_table">
       <tr>
-        <td><%=number %>問目：</td>
-        <td><%= word.japanese %></td>
-        <td>
-          <input type="text" 
-            id="english_answer_<%= word.id %>" 
-            placeholder="英語を入力" 
-            autocomplete = "off">
-        </td>
-        <td>
-          <button class="check-answer" 
-            id="english_button_<%= word.id %>" 
-            data-id="<%= word.id %>" >
-            答え合わせ
-          </button>
-        </td>
-        <td><p id="result_<%= word.id %>"></p></td>
-      </tr><br>
+        <div class="play_flex">
+          <div>
+            <td><%=number %>問目：</td>
+            <td><%= word.japanese %></td>
+          </div>
+          <div>
+            <td>
+              <input type="text" 
+                id="english_answer_<%= word.id %>" 
+                placeholder="英語を入力" 
+                autocomplete = "off">
+            </td>
+            <td>
+              <button class="check-answer" 
+                id="english_button_<%= word.id %>" 
+                data-id="<%= word.id %>" >
+                答え合わせ
+              </button>
+            </td>
+          </div>
+          <div>
+            <td><p class="play_result" id="result_<%= word.id %>"></p></td>
+          </div>
+      </div></tr></div><br>
       <% number += 1 %>
     <% end %>
+    <div class="center">
     <p id="total_result_score">正解：0問/<%= number - 1 %>問</p>
     <a href="/">HOMEに戻る</a>
+    </div>
   </div>
 </main>
 <%= javascript_include_tag "play"%>

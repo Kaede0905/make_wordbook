@@ -26,7 +26,7 @@ class WordsController < ApplicationController
     @word.File_number = 1
     @word.user_id = current_user.id
     if @word.save
-      redirect_to @word, notice: "単語を保存しました！"
+      redirect_to new_word_path, notice: "単語を保存しました！"
     else
       render 'new'
     end
